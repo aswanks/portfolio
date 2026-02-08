@@ -394,7 +394,7 @@
                     </p>
                     <div class="d-flex gap-3 mb-4">
                         <a href="#contact" class="btn btn-primary rounded-pill">Hire Me</a>
-                        <a href="#" class="btn btn-outline-dark rounded-pill">Download CV <i
+                        <a href="javascript:void(0)" class="btn btn-outline-dark rounded-pill"  onclick="downloadCV()">Download CV <i
                                 class="bi bi-download ms-2"></i></a>
                     </div>
                 </div>
@@ -1000,6 +1000,14 @@
         document.getElementById("greeting").innerText = greeting + "!";
         document.getElementById("dev-name").innerText = "I'm Aswan K.S.";
 
+        function downloadCV() {
+            const link = document.createElement("a");
+            link.href = "images/Aswan_K_S_PHP_&_Laravel_Developer_CV.pdf";
+            link.download = "Aswan_KS_CV.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
         const textElement = document.getElementById('typewriter-text');
         const phrases = ['Laravel Developer', 'PHP Developer', 'Technical Educator & Developer'];
@@ -1127,5 +1135,6 @@
 </body>
 
 </html>
+
 
 
